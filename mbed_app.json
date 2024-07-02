@@ -1,0 +1,17 @@
+{
+    "requires": ["drivers", 
+                 "platform",
+                 "rtos-api",
+                 "mbed-trace",
+                 "blockdevice", 
+                 "filesystem",
+                 "sd",
+                 "fat_chan"],
+    "target_overrides": {
+        "*": {
+            "target.printf_lib": "std",
+            "target.c_lib": "std",
+            "target.components_add": ["SD"]
+        }
+    }
+}
